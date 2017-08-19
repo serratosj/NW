@@ -1,0 +1,77 @@
+{
+  "src_folders" : ["tests"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "",
+  "custom_assertions_path" : "",
+  "page_objects_path" : "C:/NightwatchITether/pages",
+  "globals_path" : "C:/NightwatchITether/lib/globals.js",
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "C:/NightwatchITether/bin/selenium-server-standalone-3.4.0.jar",
+    "log_path" : "C:/NightwatchITether/selenium_log/",
+    "host" : "",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "C:/NightwatchITether/bin/chromedriver.exe",
+      "webdriver.ie.driver" : "C:/NightwatchITether/bin/IEDriverServer.exe",
+	  "phantomjs.binary.path" : "C:/NightwatchITether/bin/phantomjs/bin/phantomjs.exe"
+      
+    }
+  },
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://pro-qa.itetherllc.com/",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : true,
+        "path" : "C:/NightwatchITether/bin/screenshots",
+        "on_failure": true
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    },
+
+    "phantomjs": {
+      "launch_url" : "http://pro-qa.itetherllc.com/#login",
+      "desiredCapabilities" : {
+      "browserName" : "phantomjs",
+      "javascriptEnabled" : true,
+      "acceptSslCerts": true,
+      "phantomjs.cli.args" : ["--ignore-ssl-errors=true"],
+      "phantomjs.binary.path" : "C:/NightwatchITether/bin/phantomjs/bin/phantomjs.exe",
+      "phantomjs.page.settings.userAgent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+      }
+    },
+
+    "chrome" : {
+	  "launch_url" : "http://pro-qa.itetherllc.com/",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions" : {
+    "args" : ["--disable-web-security", "ignore-certificate-errors", "allow-running-insecure-content", 
+                "--test-type"]
+        }
+      }
+
+    },
+
+      "IE" : {
+	  "launch_url" : "http://pro-qa.itetherllc.com/",
+      "desiredCapabilities": {
+        "browserName": "internet explorer",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+
+    }
+  }
+}

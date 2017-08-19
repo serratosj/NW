@@ -1,0 +1,1 @@
+require('C:/Users/jserratos/AppData/Roaming/npm/node_modules/nightwatch/bin/runner.js');
