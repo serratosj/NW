@@ -39,9 +39,8 @@ module.exports = {
 	  .useCss()
 
       .waitForElementVisible('input[name="idAccessors"]', 20000)
-  	  .setValue('input[name="idAccessors"]', "Ni")
-
-	  .waitForElementVisible('#typeahead-531-536-option-0[title="Nicolas Jaar (program director)"]', 20000)
+  	  .setValue('input[name="idAccessors"]', "aa")
+	  .waitForElementVisible('a[title="Nicolas Jaar (program director)"]', 20000)
 	  .click('a[title="Nicolas Jaar (program director)"]')
 	
       /*Save changes*/
